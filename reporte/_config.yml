@@ -1,0 +1,25 @@
+title: Propuesta de infraestructura en la nube en AWS para la empresa Ciberseguridad Proactiva S.L.
+author: Estupiñán Juan, Rocha Juan, Rodríguez Silvana, Sepulveda Juan
+logo: assets/logo.png
+
+launch_buttons:
+  binderhub_url: "https://mybinder.org"
+  thebe: true
+
+latex:
+  commands:
+    latexmk: {}
+
+execute:
+  execute_notebooks: "off"
+
+repository:
+  url: https://github.com/Juanpablor5/analitica_saber-11.old
+  path_to_book: docs # Optional path to your book, relative to the repository root
+  branch: main
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
