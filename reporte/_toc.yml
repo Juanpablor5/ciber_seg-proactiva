@@ -3,11 +3,18 @@ root: content/main
 
 chapters:
   - file: content/introduccion
-  - file: content/objetivos
-  - file: content/aws
-  - file: content/nb
-  # - file: content/etl
-  #   sections:
-  #     - file: content/etl/etl_analitica
-  #     - file: content/etl/prefect
+  - file: content/resumen_arquitectura
+    sections:
+      - file: content/arquitectura/ec2
+      - file: content/arquitectura/rds
+      - file: content/arquitectura/lambda
+      - file: content/arquitectura/docker
+      - file: content/arquitectura/cloudwatch
+      - file: content/arquitectura/s3
+      - file: content/arquitectura/kinesis
+      - file: content/arquitectura/iam
+  - file: content/diagrama_arquitectura
+  - file: content/estimacion_costos
+  - file: content/pasos_despliegue
+  - file: content/simulacion_logs
   - file: content/conclusiones

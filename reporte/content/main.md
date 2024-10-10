@@ -7,7 +7,7 @@ En este proyecto se propone una infraestructura en la nube en AWS para la empres
 ## Contenido
 
 - [Introducción](introduccion.md)
-- [Objetivos](objetivos.md)
+- [Resumen de la Arquitectura](resumen_arquitectura.md)
 - [AWS](aws.md)
 - [NB Example](nb.ipynb)
 <!-- - [Proceso ETL de la base de datos](etl.md)
