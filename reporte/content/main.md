@@ -8,8 +8,7 @@ En este proyecto se propone una infraestructura en la nube en AWS para la empres
 
 - [Introducción](introduccion.md)
 - [Resumen de la Arquitectura](resumen_arquitectura.md)
-- [AWS](aws.md)
-- [NB Example](nb.ipynb)
+- [Procesamiento de Logs en Tiempo Real](simulacion_logs.ipynb)
 <!-- - [Proceso ETL de la base de datos](etl.md)
   - [Flujo del proceso ETL](etl/etl_analitica.ipynb)
   - [Análisis de flujo de trabajo con Prefect](etl/prefect.md) -->
