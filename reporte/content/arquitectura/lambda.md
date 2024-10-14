@@ -14,7 +14,7 @@ Pero Lambda no es el único servicio de este tipo. Microsoft tiene algo parecido
 
 Es decir, puedes enfocarte en crear y no tanto en mantener servidores.
 
-![](../../assets/lambda1.jpg)
+![](../../assets/lambda/lambda1.jpg)
 
 ### ¿Por qué es necesario?
 
@@ -24,7 +24,7 @@ Con Lambda, en cambio, solo se ejecuta el código cuando detectamos un posible a
 
 Además, al estar en el ecosistema de AWS, es muy fácil integrarlo con otros servicios, como CloudWatch, que nos ayuda a monitorear los sistemas y activa Lambda cuando hace falta, o S3, para manejar los logs de forma sencilla. Es un enfoque que nos da mucha flexibilidad y control sin toda la complejidad de la infraestructura tradicional.
 
-![](../../assets/lambda2.png)
+![](../../assets/lambda/lambda2.png)
 
 ## Estimación de costos
 
@@ -36,36 +36,34 @@ Con estas consideraciones, llegamos a los costos estimados:
 
 2. Service Settings
 
-| Concepto                | Configuración | Comentario                                               |
-|-------------------------|---------------|----------------------------------------------------------|
-| **Architecture**        | X86           |                                                          |
-| **Number of requests**  | 144 por día   | Estimando ejecutar la función cada 10 minutos            |
-| **Duration of each request** | 25 segundos | Suficiente para que finalice el código                    |
-| **Amount of Memory**    | 1 GB          | Suficiente para que aguante los datos que se necesiten en ese momento |
+| Concepto                     | Configuración | Comentario                                                            |
+| ---------------------------- | ------------- | --------------------------------------------------------------------- |
+| **Architecture**             | X86           |                                                                       |
+| **Number of requests**       | 144 por día   | Estimando ejecutar la función cada 10 minutos                         |
+| **Duration of each request** | 25 segundos   | Suficiente para que finalice el código                                |
+| **Amount of Memory**         | 1 GB          | Suficiente para que aguante los datos que se necesiten en ese momento |
 
-![](../../assets/lambda3.png)
+![](../../assets/lambda/lambda3.png)
 
 3. Provisioned Concurrency
-Esta función opcional al momento de crearla permite que la respuesta sea instantánea ya que el servicio estará preparado las 24 horas del día para ejecutarse, es muy importante en nuestro caso ya que son respuestas de seguridad.
+   Esta función opcional al momento de crearla permite que la respuesta sea instantánea ya que el servicio estará preparado las 24 horas del día para ejecutarse, es muy importante en nuestro caso ya que son respuestas de seguridad.
 
-| Concepto               | Configuración | Comentario                                              |
-|------------------------|---------------|---------------------------------------------------------|
-| Architecture           | X86           |                                                         |
-| Number of requests     | 144 por día   | Estimando ejecutar la función cada 10 minutos           |
-| Duration of each request | 25 segundos  | Suficiente para que finalice el código                  |
-| Amount of Memory       | 1 GB          | Suficiente para que aguante los datos que se necesiten en ese momento |
-
+| Concepto                 | Configuración | Comentario                                                            |
+| ------------------------ | ------------- | --------------------------------------------------------------------- |
+| Architecture             | X86           |                                                                       |
+| Number of requests       | 144 por día   | Estimando ejecutar la función cada 10 minutos                         |
+| Duration of each request | 25 segundos   | Suficiente para que finalice el código                                |
+| Amount of Memory         | 1 GB          | Suficiente para que aguante los datos que se necesiten en ese momento |
 
 **Con la información anterior los costos son:**
 
-| Concepto                                      | Costo (USD) |
-|-----------------------------------------------|-------------|
-| Lambda Cost (Monthly)                         | 1.82 USD    |
-| Lambda costs for Provisioned Concurrency (Monthly) | 11.5 USD |
-| **Total**                                     | **13.32 USD** |
+| Concepto                                           | Costo (USD)   |
+| -------------------------------------------------- | ------------- |
+| Lambda Cost (Monthly)                              | 1.82 USD      |
+| Lambda costs for Provisioned Concurrency (Monthly) | 11.5 USD      |
+| **Total**                                          | **13.32 USD** |
 
-![](../../assets/lambda4.png)
-
+![](../../assets/lambda/lambda4.png)
 
 ## Pasos detallados para despliegue
 
@@ -75,40 +73,40 @@ Para el despliegue de la función lambda necesaria en nuestro caso es el siguien
 
 2. Buscar servicio Lambda
 
-![](../../assets/lambda5.png)
+![](../../assets/lambda/lambda5.png)
 
 3. Seleccionar "Create function"
 
-![](../../assets/lambda6.png)
+![](../../assets/lambda/lambda6.png)
 
 4. Seleccionar "Container image" ya que nosotros tenemos que conectarlo a una dependencia Docker
 
-![](../../assets/lambda7.png)
+![](../../assets/lambda/lambda7.png)
 
 5. Asignar nombre y Buscar Docker container
 
-![](../../assets/lambda8.png)
+![](../../assets/lambda/lambda8.png)
 
 6. Asignar arquitectura de x86
 
-![](../../assets/lambda9.png)
+![](../../assets/lambda/lambda9.png)
 
 7. Asignar role de seguridad
 
-![](../../assets/lambda10.png)
+![](../../assets/lambda/lambda10.png)
 
 8. Función Lambda Creada
 
-![](../../assets/lambda11.png)
+![](../../assets/lambda/lambda11.png)
 
 9. Agregar trigger: se conectara con el servicio CloudWatch Logs
 
-![](../../assets/lambda12.png)
+![](../../assets/lambda/lambda12.png)
 
 10. Flujo configurado
 
-![](../../assets/lambda13.png)
+![](../../assets/lambda/lambda13.png)
 
 11. Configuración código para corregir fallas de seguridad
 
-![](../../assets/lambda14.png)
+![](../../assets/lambda/lambda14.png)
