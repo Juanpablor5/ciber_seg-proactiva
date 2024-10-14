@@ -1,2 +1,4 @@
 .DS_Store
 reporte/_build
+*/**/logs_simulados.json
+*/**/amenazas_detectadas.json
