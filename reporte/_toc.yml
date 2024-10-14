@@ -14,7 +14,5 @@ chapters:
       - file: content/arquitectura/kinesis
       - file: content/arquitectura/iam
   - file: content/diagrama_arquitectura
-  - file: content/estimacion_costos
-  - file: content/pasos_despliegue
   - file: content/simulacion_logs
   - file: content/conclusiones

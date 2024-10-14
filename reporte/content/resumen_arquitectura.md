@@ -12,6 +12,3 @@ La solución propuesta integra diversos servicios de WS para cubrir las necesida
 - **S3**: Almacenamiento de logs de seguridad y eventos de seguridad detectados.
 - **Amazon Kinesis**: Procesamiento de streams de logs en tiempo real.
 - **IAM**: Gestión de roles y usuarios.
-
-> Figura 1: Diagrama de arquitectura de la solución propuesta
-> ======================= AGREGAR DIAGRAMA DE ARQUITECTURA =======================
