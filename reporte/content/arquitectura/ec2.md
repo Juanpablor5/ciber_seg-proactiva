@@ -82,21 +82,55 @@ Alta Disponibilidad: Para garantizar disponibilidad continua, podría ser útil 
 
 1. **Configurar instancia EC2**:
    - Iniciar sesión en AWS Management Console y navegar a EC2.
-   - Seleccionar "Launch Instance" y escoger el tipo de instancia que mejor se adapte (por ejemplo, t2.large para un equilibrio entre costo y rendimiento).
-   - Configurar el almacenamiento de la instancia (EBS) y elegir la cantidad de almacenamiento necesaria.
-   - Configurar las reglas de seguridad para permitir el acceso SSH y otros puertos necesarios.
-   - Lanzar la instancia y conectar por SSH para configurar el ambiente.
+ 
+![](../../assets/EC2/ec2_2.png)   
+
+   - Hacer clic en "Launch Instance" para iniciar el proceso de configuración.
+
+![](../../assets/EC2/ec2_3.png)   
+
+   - Escoger el tipo de instancia, en este caso, c5.large (o cualquier tipo según los requisitos)
+
+![](../../assets/EC2/ec2_4.png) 
+
+   - Configurar las reglas de seguridad, habilitando el acceso SSH (puerto 22) y cualquier otro puerto necesario.
+
+![](../../assets/EC2/ec2_5.png)
+
+   - Hacer clic en "Launch" y seleccionar crear un par de claves (key pair) para conectarse a la instancia.
+
+![](../../assets/EC2/ec2_6.png)   
 
 2. **Instalar software necesario en la instancia**:
    - Conectar a la instancia EC2 mediante SSH.
+
+     ```bash
+     ssh -i "nombre_de_tu_llave.pem" ec2-user@tu_direccion_ip_publica
+     ```
+
    - Actualizar el sistema operativo e instalar las herramientas necesarias, como Docker, Python y otros paquetes requeridos para el procesamiento de los logs.
+     
+     ```bash
+     # Actualizar el sistema operativo
+     sudo yum update -y
+     
+     # Instalar Docker
+     sudo amazon-linux-extras install docker
+     sudo service docker start
+     sudo usermod -a -G docker ec2-user
+     
+     # Instalar Python
+     sudo yum install python3 -y
+     ```
 
 3. **Desplegar contenedores Docker en EC2**:
+
    - Instalar Docker en la instancia EC2.
    - Crear o descargar la imagen Docker con los algoritmos de detección desarrollados en Python.
    - Ejecutar los contenedores con los algoritmos y asegurarse de que estén corriendo correctamente.
 
 4. **Configurar monitoreo y alertas**:
+
    - Utilizar AWS CloudWatch para monitorizar la instancia EC2 y configurar métricas clave como uso de CPU, memoria y disco.
    - Configurar alarmas para recibir notificaciones si se superan ciertos umbrales, garantizando la operatividad de la instancia.
 
