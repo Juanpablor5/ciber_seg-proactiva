@@ -1,3 +1,7 @@
 # Introducción
 
-Ciberseguridad Proactiva S.L. es una PYME especializada en servicios de ciberseguridad, centrada en el análisis de logs de seguridad para identificar amenazas y prevenir ataques. Dada la necesidad de procesar grandes volúmenes de datos y generar alertas en tiempo real, se propone una arquitectura basada en servicios de AWS que permita escalabilidad, eficiencia y costos optimizados.
+Ciberseguridad Proactiva S.L. es una PYME dedicada a la detección de amenazas y prevención de ataques mediante el análisis de grandes volúmenes de logs de seguridad. Para enfrentar los desafíos actuales del crecimiento de datos y la complejidad de los sistemas, se propone una solución basada en tecnologías de Amazon Web Services (AWS) que incluyen Amazon EC2, S3, Lambda, RDS, Kinesis, Docker, CloudWatch e IAM. Estos componentes permiten el procesamiento eficiente de los logs, la detección de amenazas en tiempo real, la monitorización continua y el almacenamiento seguro de datos.
+
+La solución diseñada es flexible y escalable, permitiendo a Ciberseguridad Proactiva S.L. optimizar costos y ajustar la infraestructura a las necesidades del negocio. Esto resulta crucial para una empresa con recursos limitados, ya que facilita la competencia en un entorno exigente sin grandes inversiones iniciales en infraestructura física.
+
+Este trabajo describe los componentes de la solución, los pasos para desplegar la infraestructura, y estima los costos asociados al uso de AWS. La implementación de esta estrategia permitirá a la empresa mejorar la eficiencia en el procesamiento de datos y centrarse en su objetivo principal: proteger a sus clientes contra amenazas de seguridad mediante servicios de ciberseguridad proactiva de alta calidad.
