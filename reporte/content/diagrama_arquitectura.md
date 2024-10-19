@@ -18,17 +18,17 @@ Este representa la arquitectura que hemos diseñado para "Ciberseguridad Proacti
 
    - Utilizamos Kinesis como punto central de ingesta de los logs provenientes de los dispositivos de seguridad. Esto asegura un flujo continuo y gestionable de datos hacia nuestros sistemas de procesamiento.
 
-3. **AWS Lambda**
-
-   - Implementamos funciones Lambda para procesar los logs en tiempo real. Estas funciones, desarrolladas en Python, aplican algoritmos de detección de anomalías para identificar posibles amenazas de manera inmediata.
-
-4. **Amazon S3**
+3. **Amazon S3**
 
    - Los logs se almacenan en Amazon S3 para mantener un registro histórico y facilitar análisis posteriores. Este almacenamiento nos permite conservar grandes volúmenes de datos de forma segura y rentable.
 
-5. **Amazon EC2 (Algoritmos de Detección de Amenazas)**
+4. **Amazon EC2 (Algoritmos de Detección de Amenazas)**
 
    - Desplegamos instancias EC2 que ejecutan nuestros algoritmos de detección de amenazas contenerizados con Docker. Estas instancias acceden a los logs almacenados en S3 para realizar análisis más profundos y generar reportes detallados.
+
+5. **AWS Lambda**
+
+   - Implementamos funciones Lambda para recibir los logs procesados bajo las amenazas detectadas y generar el envío de las alertas a través de SNS.
 
 6. **Amazon RDS (PostgreSQL)**
 
