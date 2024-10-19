@@ -1,4 +1,7 @@
 # Conclusiones
 
-- ...
-- ...
+La implementación de la solución en la nube para Ciberseguridad Proactiva S.L. ha sido un paso importante para mejorar su capacidad de análisis y respuesta ante amenazas de seguridad. Al utilizar una combinación de servicios de Amazon Web Services (AWS) como EC2, S3, Lambda, RDS, Kinesis, Docker, CloudWatch e IAM, se ha creado una infraestructura flexible y escalable que permite a la empresa adaptarse fácilmente a los cambios en el volumen de datos y a las crecientes demandas de seguridad. Además de asegurar la disponibilidad y protección de los datos, esta infraestructura ayuda a optimizar los costos operativos aprovechando las ventajas de la nube.
+
+El uso de contenedores Docker, junto con las funciones serverless de AWS Lambda, ha hecho que la implementación de algoritmos de detección de amenazas sea mucho más ágil y sencilla. Esto permite a la empresa reducir el tiempo necesario para desplegar nuevas funcionalidades y responder rápidamente ante posibles incidentes de seguridad. La integración de AWS Kinesis para procesar datos en tiempo real y Amazon RDS para almacenar eventos de seguridad también ha proporcionado una plataforma sólida para gestionar y analizar grandes volúmenes de información.
+
+En definitiva, adoptar esta arquitectura en la nube permite a Ciberseguridad Proactiva S.L. mantenerse a la vanguardia en tecnología y ofrecer un servicio más eficiente y seguro a sus clientes. La combinación de escalabilidad, flexibilidad y optimización de costos coloca a la empresa en una excelente posición para enfrentar los desafíos del entorno digital actual, asegurando una protección proactiva de alta calidad que cumple con las expectativas de un mercado cada vez más exigente.
